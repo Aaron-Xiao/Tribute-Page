@@ -1,17 +1,16 @@
-
 body {
-	margin: 0;
 	font: 16px/1.6 serif;
 	color: #333;
 	background-color: #eee;
 }
 
-
 .container {
 	box-sizing: border-box;
-	max-width: 1000px;
+	width: 90%;
+	min-width: 320px;
+	max-width: 960px;
 	margin: 0 auto;
-	padding: 100px 2em 1em;
+	padding: 75px 2em 1em;
 }
 
 .main {
@@ -20,18 +19,21 @@ body {
 }
 
 
-
 /* header */
 
-h1, h2 {
+h1, h2, h3 {
 	text-align: center;
 }
 
-header h2 {
+h1 {
+	text-shadow: 1px 1px 1px #300, 2px 2px 2px #300;
+}
+
+.subtitle {
 	margin-top: 1em;
 }
 
-cite:before, header h2:before {
+cite:before, .subtitle:before {
 	content: "";
 	display: inline-block;
 	width: 1em;
@@ -40,7 +42,6 @@ cite:before, header h2:before {
 	vertical-align: .25em;
 	background-color: #333;
 }
-
 
 img {
 	width: 100%;
@@ -51,7 +52,7 @@ img {
 }
 
 .img p:before {
-	content: " ";
+	content: "";
 	display: inline-block;
 	width: 0;
 	height: 0;
@@ -60,19 +61,26 @@ img {
 	vertical-align: -4px;
 }
 
+
 /* 人物生平 */
 
-.time-line, .praise {
+.time-line, .evaluation {
 	margin-top: 3em;
 	padding: 1em 0;
 }
 
 
 li {
-	line-height: 30px;
+	line-height: 2em;
 	margin: .5em 0;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
 }
 
+li:last-child {
+	padding-bottom: 0;
+	border: none;
+}
 
 a {
 	display: inline-block;
@@ -89,31 +97,33 @@ a:hover {
 	border-radius: .5em 0 0 0;
 }
 
-.heading2 {
-	display: inline-block;
-	text-align: center;
-	width: 8em;
-	line-height: 3em;
-	margin-bottom: 1em;
-	border-radius: 1em 2em;
-	background: linear-gradient(90deg, #333, #aaa);
-	color: #eee;
-	letter-spacing: .5em;
-}
-
-
-.heading3 {
-	display: inline-block;
-	text-align: center;
-	width: 4em;
-	line-height: 2em;
+.heading2, .heading3 {
 	letter-spacing: .5em;
 	padding-left: .3em;
-	background-color: #ccc;
-	box-shadow: -1px 1px 1px #aaa, -2px -2px 2px #aaa;
 }
 
-h3 ~ h3 {
+.heading2 {
+	display: table;
+	margin: 0 auto 1em auto;
+	width: 8em;
+	line-height: 3em;
+	border-radius: 1em 2em;
+	background: -webkit-linear-gradient(left, #333, #aaa);
+	background: linear-gradient(90deg, #333, #aaa);
+	box-shadow: 2px 2px 2px #333;
+	color: #eee;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+.heading3 {
+	width: 4em;
+	line-height: 2em;
+	background-color: #ccc;
+	box-shadow: -5px 0 2px #333;
+	margin-left: 5px;
+}
+
+.heading3 ~ .heading3 {
 	margin-top: 2em;
 }
 
@@ -147,4 +157,37 @@ cite {
 
 .infos {
 	margin-top: 3em;
+}
+
+/* footer */
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  padding: 1em;
+  margin: 3em 0 0 0;
+}
+
+footer span {
+  padding: 0 .5em;
+  display: inline-block;
+  line-height: 15px;
+}
+
+footer span:last-of-type {
+  border-left: 2px solid #cd5b45;
+  padding-left: 1em;
+}
+
+#author {
+	display: inline-block;
+	color: #ffa500;
+	width: 4.5em;
+	font-size: 16px;
+}
+
+#author:hover {
+	background-color: rgba(155,155,155,.5);
 }
