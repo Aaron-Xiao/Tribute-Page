@@ -1,0 +1,150 @@
+
+body {
+	margin: 0;
+	font: 16px/1.6 serif;
+	color: #333;
+	background-color: #eee;
+}
+
+
+.container {
+	box-sizing: border-box;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 100px 2em 1em;
+}
+
+.main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+
+/* header */
+
+h1, h2 {
+	text-align: center;
+}
+
+header h2 {
+	margin-top: 1em;
+}
+
+cite:before, header h2:before {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height:.1em;
+	margin-right: .5em;
+	vertical-align: .25em;
+	background-color: #333;
+}
+
+
+img {
+	width: 100%;
+}
+
+.img p {
+	text-align: right;
+}
+
+.img p:before {
+	content: " ";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 10px solid;
+	border-color: transparent transparent transparent #777;
+	vertical-align: -4px;
+}
+
+/* 人物生平 */
+
+.time-line, .praise {
+	margin-top: 3em;
+	padding: 1em 0;
+}
+
+
+li {
+	line-height: 30px;
+	margin: .5em 0;
+}
+
+
+a {
+	display: inline-block;
+	color: #05f;
+	text-decoration: none;
+	margin: 0 .2em;
+	padding: .2em .4em;
+}
+
+a:hover {
+	background-color: #7f7f7f;
+	box-shadow: 2px 2px 2px #3a3a3a;
+	color: #eee;
+	border-radius: .5em 0 0 0;
+}
+
+.heading2 {
+	display: inline-block;
+	text-align: center;
+	width: 8em;
+	line-height: 3em;
+	margin-bottom: 1em;
+	border-radius: 1em 2em;
+	background: linear-gradient(90deg, #333, #aaa);
+	color: #eee;
+	letter-spacing: .5em;
+}
+
+
+.heading3 {
+	display: inline-block;
+	text-align: center;
+	width: 4em;
+	line-height: 2em;
+	letter-spacing: .5em;
+	padding-left: .3em;
+	background-color: #ccc;
+	box-shadow: -1px 1px 1px #aaa, -2px -2px 2px #aaa;
+}
+
+h3 ~ h3 {
+	margin-top: 2em;
+}
+
+
+/* 人物评价 */
+
+blockquote {
+	padding: .5em;
+	padding-left: 1em;
+	border-left: .5em solid #aaa;
+	border-right: .5em solid #aaa;
+	border-radius: 1em 1em 2em 1em;
+	background-color: #ddd;
+}
+
+blockquote p {
+	margin: 0;
+	padding: .5em 1em;
+}
+
+blockquote p:last-child {
+	text-align: right;
+}
+
+cite {
+	margin-right: 2.5em;
+}
+
+
+/* 更多信息 */
+
+.infos {
+	margin-top: 3em;
+}
